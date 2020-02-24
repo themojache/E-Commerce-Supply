@@ -1,0 +1,14 @@
+﻿@media print { /* Not needed, media selector should be used on the link element, but if your extra cautious */
+    body{background:white;}
+    nav form,nav menu,input[type=checkbox],input[type=radio]{display:none!important;}
+    
+    table.res{width:100%;}
+    table.res th,table.res td{text-align:center;}
+    table.res tr td:nth-child(2),table.res tr th:nth-child(2){text-align:left;} 
+    table.res tr td:nth-child(1){width:200px;} 
+    table.res tr td:nth-child(3){width:100px;} 
+    table.res tr td:nth-child(4){width:170px;} 
+    table.res tr td:nth-child(5){width:400px;} 
+
+    /* Other things here, lots of refinement */
+}

@@ -1,0 +1,115 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="ui-tabgroup left-side">
+    <input class="ui-tab1" type="radio" id="home_group_tab1" name="home_group" checked />
+    <input class="ui-tab2" type="radio" id="home_group_tab2" name="home_group" />
+    <input class="ui-tab3" type="radio" id="home_group_tab3" name="home_group" />
+    <input class="ui-tab4" type="radio" id="home_group_tab4" name="home_group" />
+    <div class="ui-tabs">
+        <label class="ui-tab1" for="home_group_tab1"><a><i class="icon icon-grid"></i> All Categories</a></label>
+        <label class="ui-tab2" for="home_group_tab2"><a><i class="icon icon-user"></i> Previously Viewed Items</a></label>
+        <label class="ui-tab3" for="home_group_tab3"><a><i class="icon icon-hammer"></i> Manufacturers</a></label>
+        <label class="ui-tab4" for="home_group_tab4"><a><i class="icon icon-office"></i> Product Markets</a></label>
+        <label class="ui-tab5" target="_blank"><a href="~/search/flag/New"><i class="icon icon-new"></i> New Products</a></label>
+        <label class="ui-tab6" target="_blank"><a href="~/search/flag/Made in USA"><i class="icon icon-flag-usa"></i> Made in the USA</a></label>
+        <label class="ui-tab7" target="_blank"><a href="~/search/flag/HasPromo"><i class="icon icon-tag"></i> Promotions</a></label>
+    </div>
+    <div class="ui-panels">
+        <div class="ui-tab1">
+            <a href="~/search/section/2">
+                <img src="~/images/icons/02IconBoxes.png" alt="Boxes, Enclosures" height="37">
+                <h3>Boxes, Enclosures</h3> Explosion Proof, Metallic, Industrial, Underground
+            </a>
+            <a href="~/search/section/3">
+                <img src="~/images/icons/02IconConduit.png" alt="Conduit, Ducts" height="37">
+                <h3>Conduit, Ducts</h3> PVC, EMT, Cable Tray, Strut, Duct, Wireway
+            </a>
+            <a href="~/search/section/4">
+                <img src="~/images/icons/02IconConnectors.png" alt="Connectors, Crimps" height="37">
+                <h3>Connectors, Crimps</h3> Forks, Rings, Wire Nuts, Heat Shrink, Cold Shrink
+            </a>
+            <a href="~/search/section/5">
+                <img src="~/images/icons/02IconControl.png" alt="Control, Automation" height="37">
+                <h3>Control, Automation</h3> Drives, Softstarters, Starters, Relays, Sensors
+            </a>
+            <a href="~/search/section/6">
+                <img src="~/images/icons/02IconData.png" alt="Data, Video, Audio" height="37">
+                <h3>Data, Video, Audio</h3> Patch Panels, Cat 5-6, OSP, Network Devices
+            </a>
+            <a href="~/search/section/17">
+                <img src="~/images/icons/02IconFasteners.png" alt="Fasteners" height="37">
+                <h3>Fasteners</h3> Nuts, Screws, Bolts, Washers, Tape, Anchors
+            </a>
+            <a href="~/search/section/9">
+                <img src="~/images/icons/02IconFittings.png" alt="Fittings" height="37">
+                <h3>Fittings</h3> Hubs, Grips, Bushings, Seals, Nipples, Straps
+            </a>
+            <a href="~/search/section/7/group/89">
+                <img src="~/images/icons/02IconFuses.png" alt="Fuses" height="37">
+                <h3>Fuses</h3> Power, Electronic, Midget, DC, Plugs, Blocks, Holders
+            </a>
+            <a href="~/search/section/1">
+                <img src="~/images/icons/02IconHeat.png" alt="Heat, Fans" height="37">
+                <h3>Heat, Fans</h3> Floor, Wall, Pipe Tracing Venting, Thermostats
+            </a>
+            <a href="~/search/section/10">
+                <img src="~/images/icons/02IconLamps.png" alt="Lamps, Ballasts" height="37">
+                <h3>Lamps, Ballasts</h3> LED, CFL, Halogen, HID, Fluorescent, Cathode, Mini
+            </a>
+            <a href="~/search/section/11">
+                <img src="~/images/icons/02IconLighting.png" alt="Lighting, Controls" height="37">
+                <h3>Lighting, Controls</h3> Fixtures, Sensors,  Timers, Indoor, Outdoor
+            </a>
+            <a href="~/search/section/7">
+                <img src="~/images/icons/02IconPower.png" alt="Power Distribution" height="37">
+                <h3>Power Distribution</h3> Breakers, Generators, Metering, Disconnect
+            </a>
+            <a href="~/search/section/12">
+                <img src="~/images/icons/02IconSignaling.png" alt="Signaling, Security" height="37">
+                <h3>Signaling, Security</h3> Fire Alarm, Card Access, Signaling, Intercom
+            </a>
+            <a href="~/search/section/16">
+                <img src="~/images/icons/02IconSolar.png" alt="Solar, Clean Energy" height="37">
+                <h3>Solar, Clean Energy</h3> Modules, Inverters, EVSE, Racking,Power Quality
+            </a>
+            <a href="~/search/section/13">
+                <img src="~/images/icons/02IconTools.png" alt="Tools" height="37">
+                <h3>Tools</h3> Power, Hand, Cleaning, Thermography, Bending
+            </a>
+            <a href="~/search/market/utility/section/14">
+                <img src="~/images/icons/02IconUtility.png" alt="Utility" height="37">
+                <h3>Utility</h3> Line Hardware, Chemicals, Power Cable, Service Mast
+            </a>
+            <a href="~/search/section/15">
+                <img src="~/images/icons/02IconWire.png" alt="Wire" height="37">
+                <h3>Wire</h3> Armored, Bare, Building, Low Voltage, Category
+            </a>
+            <a href="~/search/section/8">
+                <img src="~/images/icons/02IconWiring.png" alt="Wiring Devices" height="37">
+                <h3>Wiring Devices</h3> Twistlock, Pin Sleeve, Receptacles, GFCI
+            </a>
+        </div>
+        <div class="ui-tab2 padded-tab">
+            <span><a onclick="">Sign in</a> to see your Purchased Products and Preferred Products.</span>
+        </div>
+        <div class="ui-tab3">
+            @Html.Partial("~/Pages/PartialManufacturers.cshtml")
+        </div>
+        <div class="ui-tab4">
+            <a href="search/market/datacomm"><img alt="DataComm Market" src="~/images/markets/datacomm.jpg"><span>DataComm</span></a>
+            <a href="search/market/hvac"><img alt="HVAC Market" src="~/images/markets/hvac.jpg"><span>HVAC</span></a>
+            <a href="search/market/industrial"><img alt="Industrial Market" src="~/images/markets/industrial.jpg"><span>Industrial</span></a>
+            <a href="search/market/lamps"><img alt="Lamps Market" src="~/images/markets/lamps.jpg"><span>Lighting</span></a>
+            <a href="search/market/green"><img alt="energy efficiency" src="~/images/markets/energy-efficiency.png"><span>Energy Efficiency</span></a>
+            <a href="search/market/utility"><img alt="Utility Market" src="~/images/markets/utility.jpg"><span>Utility</span></a>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,21 @@
+﻿@using ECommerceSupply.Models;
+@model ECommerceSupply.Models.Results
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Search Results";
+}
+
+<div class="results">
+    <h2>@ViewData["Title"]</h2>
+    <h3>@Model.Message</h3>
+    @if(Model.Items == null || ((List<Item>)Model.Items).Count() == 0) {
+        <p>There were no products, matching that description, if you require assistance placing an order please contact us.</p> @* Could make it so that there is always an item by creating a new item with said name *@
+        } else {
+        <table class="res">
+            <tr><th>Image</th><th>Name</th><th>Price</th><th>Avalible Quantity</th><th>Purchase Options</th></tr>
+            @foreach(Item item in Model.Items) {
+                <tr><td>@Html.Raw(@item.GetImage())</td><td>@item.GetName()@item.GetAvalibleUntil()</td><td>@item.GetPrice()</td><td>@item.GetQuantity()</td><td><label>Quantity: <input type="number" name="quantity" value="1" min="1" max="@item.GetQuantity()" /></label><button onclick="add_to_client_cart(this);">Add To Cart</button></td></tr>
+            }
+        </table>
+    }
+</div>

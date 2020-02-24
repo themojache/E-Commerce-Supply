@@ -1,0 +1,12 @@
+﻿@using ECommerceSupply.Models;
+@model ECommerceSupply.Models.User
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "User State Change Attempt";
+}
+<div>
+    <h2>@ViewData["Message"]</h2>
+    @if(!@ViewBag.Message.ToLower().StartsWith("invalid")) {
+        <h3>@ViewBag.Message (Somewhat-Sanitized Form Data: "@Model.ToString(), Remember Login: @ViewBag.Remember")</h3>
+    }
+</div>

@@ -1,0 +1,27 @@
+﻿@page
+@model ECommerceSupply.Pages.IndexModel
+<input type="checkbox" id="login" name="login_group" /><label for="login"><a>Login/Register</a></label>
+<div id="popOutUserInfo">
+    <input type="radio" id="sign_in_group1" name="sign_in_group" checked /> <label for="sign_in_group1"><a class="btn">Sign In</a></label>
+    <input type="radio" id="register_group1" name="sign_in_group" /> <label for="register_group1"><a class="btn">Register</a></label>
+    <input type="radio" id="forgot_pass_group1" name="sign_in_group" /> <label for="forgot_pass_group1"><a class="btn">Forgot Password</a></label>
+    <form action="/sign/in" method="post" class="signIn sign-in-wrap">
+        <input type="text" name="s_accNum" id="s_accNum" value="" placeholder="Account #" />
+        <input type="text" name="s_user" id="s_user" value="" placeholder="Username" />
+        <input type="password" name="s_pass" id="s_pass" value="" placeholder="Password" />
+        @Html.AntiForgeryToken()
+        <div><span class="left"><input type="checkbox" id="s_remember" name="s_remember" checked /> <label for="s_remember">Remember Me</label></span> <input type="submit" value="Log in" /></div>
+    </form>
+    <form action="/sign/reg" method="post" class="signIn registration-wrap">
+        <input type="text" name="r_user" id="r_user" value="" placeholder="Username" />
+        <input type="password" name="r_pass" id="r_pass" value="" placeholder="Password" />
+        <input type="password" name="r_passC" id="r_passC" value="" placeholder="Confirm Password" />
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Register" />
+    </form>    
+    <form action="/sign/forgot" method="post" class="signIn forgot-pass-wrap">
+        <input type="email" name="txtEmailAddress" id="txtEmailAddress" placeholder="Email Address" />
+        @Html.AntiForgeryToken()
+        <input type="submit" value="Submit" />
+    </form>
+</div>

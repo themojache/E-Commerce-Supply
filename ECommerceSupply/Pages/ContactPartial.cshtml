@@ -1,0 +1,9 @@
+﻿@page
+@model ECommerceSupply.Pages.IndexModel
+<input type="checkbox" id="contact" name="contact_group" /><label for="contact"><a>Contact</a></label>
+<div id="popOutContactInfo">
+    @{Html.RenderPartial("~/Pages/ContactInfoPartial.cshtml", new ECommerceSupply.Pages.ContactPartialModel());}
+    <div>
+        <i class="icon icon-list"></i> <a>Apply for a line of credit</a>
+    </div>
+</div>
