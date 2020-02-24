@@ -27,3 +27,6 @@ ASP.NET Core (HTML5, CSS3, Javascript). Mostly adheres to spec. I'm sure there a
 Images are all from the clients site I was tasked with "cloning". Some text was also sampled from their site. Not likely, but if there is an issue with this they can contact me and I will place in some generic images/text in their place.
 
 The Client's site uses IcoMoon font files (some premium varient). I have removed the premium font files from the repositiory in order to not violate any licencing. I have opted to include the IcoMoon-Free varient to display some of the icons of the site.
+
+## License
+[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
