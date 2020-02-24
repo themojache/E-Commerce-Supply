@@ -29,6 +29,27 @@ namespace ECommerceSupply.Pages {
             };
             return View("Results", output);
         }
+        public IActionResult Vendor(string id) {
+            string outputStr = "This is my default vendor";
+            if(id == null) return View("Results", new Results { Message = outputStr });
+            outputStr = $"Searching for Items in the \"{id}\" vendor";
+            var itemList = new List<Item>(); //generally use SQL here rather than returning a specific list, less setup seems better for demo purposes
+            switch(id.ToLower()) {
+                case "abus":
+                    itemList.Add(new Item { Name = "ABUS 70IB/45 45mm Aquasafe Padlock Keyed 6401", Price = (decimal)26, Quantity = 10000 });
+                    break;
+                case "3m":
+                    itemList.Add(new Item { Name = "3M™ Temflex™ Vinyl Electrical Tape 1700, 3/4 in x 36 yd, 1-1/2 in Core, Black", Quantity = 12, Price = (decimal)6.99 });
+                    break;
+                default:
+                    break;
+            }
+            var output = new Results {
+                Message = outputStr,
+                Items = itemList
+            };
+            return View("Results", output);//return Content(output, "text/html");
+        }
         public IActionResult Market(string id, string groupID) {
             string outputStr = "This is my default Market";
             if(groupID != null) outputStr += "/sectionID";
